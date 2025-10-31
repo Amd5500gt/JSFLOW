@@ -6,11 +6,11 @@
     <title>JSFLOW - HTML/CSS/JS Editor & Preview</title>
     <style>
         :root {
-            --primary:#1b4332;
+            --primary:#435be2;
             --primary-dark: #5c5552;
             --primary-light: #8f857d;
             --secondary: #cea2a1;
-            --dark: #006d77;
+            --dark: #17295a;
             --gray: #83c5be;
             --success: #10B981;
             --gradient: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -365,14 +365,14 @@
     
     /* Multi-layer water background */
     background: 
-        radial-gradient(ellipse at 20% 30%, rgba(62, 114, 107, 0.9) 0%, transparent 40%),
-        radial-gradient(ellipse at 80% 70%, rgba(48, 128, 101, 0.8) 0%, transparent 40%),
-        radial-gradient(ellipse at 40% 80%, rgba(61, 81, 99, 0.7) 0%, transparent 40%),
-        linear-gradient(135deg, #3e658a 0%, #366664 50%, #4d6d8b 100%);
+        radial-gradient(ellipse at 20% 30%, rgba(73, 79, 158, 0.747) 0%, transparent 40%),
+        radial-gradient(ellipse at 80% 70%, rgba(68, 69, 138, 0.8) 0%, transparent 40%),
+        radial-gradient(ellipse at 40% 80%, rgba(58, 71, 129, 0.719) 0%, transparent 40%),
+        linear-gradient(135deg, #6647a1b2 0%, #6642a8bb 50%, #5851b9be 100%);
     
     background-size: 400% 400%, 300% 300%, 500% 500%, 200% 200%;
     animation: 
-        waterFlow 8s ease-in-out infinite,
+        waterFlow 12s ease-in-out infinite,
         waterDepth 12s ease-in-out infinite,
         surfaceRipple 10s linear infinite;
     transform-origin: center;
@@ -381,46 +381,105 @@
         0 0 50px rgba(0, 223, 216, 0.4);
 }
 
-/* 🌊 Multi-dimensional water flow */
+/* 🌊 Multi-dimensional high-pressure water flow */
 @keyframes waterFlow {
-    0%, 100% { 
+    0% {
         background-position: 
             0% 0%,
             100% 100%,
             50% 80%,
             0% 50%;
-        border-top-left-radius: 90% 70%;
-        border-top-right-radius: 40% 80%;
-       
+        border-top-left-radius: 20% 30%;
+        border-top-right-radius: 80% 40%;
+        transform: scale(1);
     }
-    25% { 
-        background-position: 
+
+    10% {
+        background-position:
+            10% 30%,
+            90% 70%,
+            40% 60%,
+            20% 40%;
+        border-top-left-radius: 25% 40%;
+        border-top-right-radius: 70% 30%;
+        transform: scaleY(1.03) scaleX(1.02);
+    }
+
+    25% {
+        background-position:
             100% 50%,
             0% 80%,
             80% 20%,
             25% 75%;
-        border-top-left-radius: 20% 30%;
-        border-top-right-radius: 90% 30%;
-
+        border-top-left-radius: 35% 45%;
+        border-top-right-radius: 90% 79%;
+        transform: scaleY(1.05) scaleX(1.04);
     }
-    50% { 
-        background-position: 
+
+    40% {
+        background-position:
+            60% 90%,
+            40% 10%,
+            15% 60%,
+            70% 35%;
+        border-top-left-radius: 50% 60%;
+        border-top-right-radius: 65% 25%;
+        transform: scaleY(0.98) scaleX(0.96);
+    }
+
+    50% {
+        background-position:
             50% 100%,
             50% 0%,
             20% 50%,
             50% 25%;
-        border-top-left-radius: 95% 85%;
+        border-top-left-radius: 90% 79%;
         border-top-right-radius: 25% 35%;
- 
+        transform: scaleY(1.1) scaleX(1.08);
     }
-    75% { 
-        background-position: 
+
+    65% {
+        background-position:
+            80% 90%,
+            20% 20%,
+            60% 60%,
+            80% 80%;
+        border-top-left-radius: 35% 20%;
+        border-top-right-radius: 80% 70%;
+        transform: scaleY(0.95) scaleX(0.92);
+    }
+
+    75% {
+        background-position:
             100% 100%,
             0% 0%,
             70% 70%,
             75% 50%;
-        border-top-left-radius: 15% 35%;
-        border-top-right-radius: 95% 35%;
+        border-top-left-radius: 15% 25%;
+        border-top-right-radius: 95% 85%;
+        transform: scaleY(1.03) scaleX(1.01);
+    }
+
+    90% {
+        background-position:
+            20% 10%,
+            80% 90%,
+            40% 30%,
+            60% 70%;
+        border-top-left-radius: 50% 50%;
+        border-top-right-radius: 40% 20%;
+        transform: scale(1.02);
+    }
+
+    100% {
+        background-position:
+            0% 0%,
+            100% 100%,
+            50% 80%,
+            0% 50%;
+        border-top-left-radius: 20% 30%;
+        border-top-right-radius: 80% 40%;
+        transform: scale(1);
     }
 }
 
